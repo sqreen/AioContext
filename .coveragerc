@@ -1,0 +1,14 @@
+[run]
+branch = True
+source = aiocontext
+
+[paths]
+source =
+    src/aiocontext
+    .tox/*/lib/python*/site-packages/aiocontext
+
+[report]
+fail_under = 100
+show_missing = True
+exclude_lines =
+    if __name__ == .__main__.:
