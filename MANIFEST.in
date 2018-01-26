@@ -1,5 +1,5 @@
 include .*.cfg *.in *.ini .*rc *.rst *.txt *.yml
-include docs/conf.py docs/make.bat docs/Makefile
+include docs/conf.py docs/make.bat docs/Makefile docs/_static/sqreen_logo.svg
 recursive-include docs *.rst
 prune docs/_build
 recursive-include tests *.py
