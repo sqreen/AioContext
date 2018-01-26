@@ -175,15 +175,15 @@ class TestContext:
 
     def test_attach(self, event_loop):
         wrap_task_factory(event_loop)
-        assert get_loop_contexts(event_loop) == []
+        assert len(get_loop_contexts(event_loop)) == 0
         context1 = Context()
         context1.attach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1]
+        assert len(get_loop_contexts(event_loop)) == 1
         context2 = Context()
         context2.attach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1, context2]
+        assert len(get_loop_contexts(event_loop)) == 2
         context2.attach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1, context2]
+        assert len(get_loop_contexts(event_loop)) == 2
 
     def test_detach(self, event_loop):
         wrap_task_factory(event_loop)
@@ -191,11 +191,11 @@ class TestContext:
         context1.attach(event_loop)
         context2 = Context()
         context2.attach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1, context2]
+        assert len(get_loop_contexts(event_loop)) == 2
         context2.detach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1]
+        assert len(get_loop_contexts(event_loop)) == 1
         context2.detach(event_loop)
-        assert get_loop_contexts(event_loop) == [context1]
+        assert len(get_loop_contexts(event_loop)) == 1
 
 
 def test_chainmap_copy():
