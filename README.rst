@@ -3,11 +3,11 @@ AioContext
 
 Context information storage for asyncio.
 
-Installation
-------------
+Project Information
+-------------------
 
-Setup with:
+AioContext is released under the LGPL license, its documentation lives at `Read
+the Docs`_ and the code on `GitHub`_.
 
-.. code-block:: bash
-
-    pip install -e .
+.. _Read the Docs: http://aiocontext.readthedocs.io/
+.. _GitHub: https://github.com/sqreen/AioContext
