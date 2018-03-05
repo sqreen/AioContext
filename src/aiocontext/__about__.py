@@ -9,5 +9,5 @@ __uri__ = 'https://github.com/sqreen/AioContext'
 __author__ = "Sqreen"
 __email__ = 'contact@sqreen.io'
 
-__license__ = 'LGPL'
+__license__ = 'MIT'
 __copyright__ = "2018, Sqreen"
