@@ -1,6 +1,6 @@
 """Project metadata."""
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 __title__ = 'aiocontext'
 __summary__ = "Context information storage for asyncio."
