@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 KEYWORDS = []
 CLASSIFIERS = [
     'Intended Audience :: Developers',
-    'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
+    'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 2',
     'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
