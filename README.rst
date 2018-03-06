@@ -3,6 +3,11 @@ AioContext
 
 Context information storage for asyncio.
 
+If you're interested in knowing more about the rationale behind writing this
+library, please read our blog post `Context information storage for asyncio`_.
+
+.. _Context information storage for asyncio: https://blog.sqreen.io/asyncio/
+
 Project Information
 -------------------
 
