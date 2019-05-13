@@ -1,6 +1,6 @@
 """Project metadata."""
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 __title__ = 'aiocontext'
 __summary__ = "Context information storage for asyncio."
@@ -10,4 +10,4 @@ __author__ = "Sqreen"
 __email__ = 'contact@sqreen.io'
 
 __license__ = 'MIT'
-__copyright__ = "2018, Sqreen"
+__copyright__ = "2019, Sqreen"
