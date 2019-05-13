@@ -106,12 +106,11 @@ problematic when using libraries.
 :func:`threading.local`. It provides no mechanism of context sharing when a
 child task is spawned. The project looks abandoned.
 
-In the future, asynchronous context storage could be supported natively in the
-Python language. This is discussed in `PEP 550`_ and `PEP 567`_.
+`contextvars`_ is the native solution to manage context-local states starting
+from Python 3.7.
 
 .. _aiohttp: https://aiohttp.readthedocs.io/
 .. _aiolocals: https://docs.atlassian.com/aiolocals/
 .. _aiotask-context: https://github.com/Skyscanner/aiotask-context
 .. _tasklocals: https://github.com/vkryachko/tasklocals
-.. _PEP 550: https://www.python.org/dev/peps/pep-0550/
-.. _PEP 567: https://www.python.org/dev/peps/pep-0567/
+.. _contextvars: https://docs.python.org/3/library/contextvars.html
