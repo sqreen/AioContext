@@ -22,7 +22,7 @@ def uvloop_loop():
 
 @pytest.fixture(params=['asyncio_loop', 'uvloop_loop'])
 def event_loop(request):
-    return request.getfuncargvalue(request.param)
+    return request.getfixturevalue(request.param)
 
 
 @pytest.fixture()

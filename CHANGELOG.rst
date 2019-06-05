@@ -9,8 +9,19 @@ The format is based on `Keep a Changelog`_ and this project adheres to
 .. _Keep a Changelog: http://keepachangelog.com/
 .. _Semantic Versioning: https://semver.org/
 
-Unreleased
-----------
+0.1.2 - 2019-05-12
+------------------
+
+Added
+^^^^^
+
+* Python 3.7 classifier in ``setup.py``.
+* Mention ``contextvars`` in documentation.
+
+Changed
+^^^^^^^
+
+* Update dependencies.
 
 0.1.1 - 2018-03-05
 ------------------
