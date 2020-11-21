@@ -56,7 +56,7 @@ def wrap_task_factory(loop):
 
     @wraps(task_factory)
     def wrapper(loop, coro):
-        parent_task = asyncio.Task.current_task(loop=loop)
+        parent_task = asyncio.current_task(loop=loop)
         child_task = task_factory(loop, coro)
         if child_task._source_traceback:
             del child_task._source_traceback[-1]
