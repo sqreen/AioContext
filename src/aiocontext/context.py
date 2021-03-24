@@ -1,6 +1,7 @@
 """Context information storage for asyncio."""
 
 import asyncio
+import sys
 from collections import ChainMap
 from collections.abc import MutableMapping
 from contextlib import suppress
@@ -70,7 +71,11 @@ class Context(MutableMapping):
             {'key': 'value'}
         """
         if task is None:
-            task = asyncio.Task.current_task()
+            if sys.version_info < (3, 9):
+                task = asyncio.Task.current_task()
+            else:
+                task = asyncio.current_task()
+
             if task is None:
                 raise EventLoopError("No event loop found")
         data = getattr(task, self._data_attr, None)

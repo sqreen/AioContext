@@ -1,11 +1,11 @@
 """Task factory."""
 
 import asyncio
+import sys
 from functools import wraps
 
 from .__about__ import __title__
 from .errors import TaskFactoryError
-
 
 _TASK_FACTORY_ATTR = '_{}_contexts'.format(__title__)
 
@@ -56,7 +56,11 @@ def wrap_task_factory(loop):
 
     @wraps(task_factory)
     def wrapper(loop, coro):
-        parent_task = asyncio.Task.current_task(loop=loop)
+        if sys.version_info < (3, 9):
+            parent_task = asyncio.Task.current_task(loop=loop)
+        else:
+            parent_task = asyncio.current_task(loop=loop)
+
         child_task = task_factory(loop, coro)
         if child_task._source_traceback:
             del child_task._source_traceback[-1]
